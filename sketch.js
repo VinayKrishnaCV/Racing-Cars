@@ -1,4 +1,4 @@
-var gameState=0,playerCount,database,game,form,player;
+var gameState=0,playerCount,database,game,form,player,allPlayers;
 
 function setup(){
 
@@ -13,5 +13,12 @@ function setup(){
 function draw(){
 
     background("white");
+
+    if(playerCount===2){
+        game.update(1)
+    }
+    if(gameState===1){
+        game.play()
+    }
 
 }

@@ -1,20 +1,22 @@
 class Form{
-    constructor(){}
+    constructor(){
+     this.input = createInput("ᗴᑎ丅ᗴᖇ ᑎᗩᗰᗴ")
+     this.button = createButton("🅿🅻🅰🆈")
+     this.greeting = createElement("h2")
+    }
     display(){
         var title = createElement("h2")
         title.html("ℜ𝔞𝔠𝔦𝔫𝔤 ℭ𝔞𝔯𝔰")
         title.position(500,20)
-        var input = createInput("ᗴᑎ丅ᗴᖇ ᑎᗩᗰᗴ")
-        var button = createButton("🅿🅻🅰🆈")
-        var greeting = createElement("h2")
-        button.mousePressed(function(){
-            input.hide()
-            button.hide()
-            var greeter = input.value();
-            greeting.html("Welcome "+ greeter)
+        this.button.mousePressed(()=>{
+            this.input.hide()
+            this.button.hide()
+            player.name = this.input.value();
+            this.greeting.html("Welcome "+ player.name)
             playerCount+=1
+            player.index=playerCount
             player.updateCount(playerCount)
-            player.update(greeter)
+            player.update()
         })
     }
 }

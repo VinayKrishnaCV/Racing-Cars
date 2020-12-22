@@ -7,7 +7,9 @@ class Form{
     display(){
         var title = createElement("h2")
         title.html("ℜ𝔞𝔠𝔦𝔫𝔤 ℭ𝔞𝔯𝔰")
-        title.position(500,20)
+        title.position(displayWidth/2-50,-24)
+        this.input.position(displayWidth/2-200,20)
+        this.button.position(displayWidth/2+100,20)
         this.button.mousePressed(()=>{
             this.input.hide()
             this.button.hide()

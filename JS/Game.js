@@ -68,6 +68,5 @@ class Game {
     }
 
     end(){
-        console.log("game ended do not join again")
     }
 }

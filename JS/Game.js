@@ -43,20 +43,25 @@ class Game {
         var x=350;
         var y;
         var index = 0;
+        image(TRACK,0,-height*4,width,height*5)
         for(var plr in allPlayers){
-            //text(allPlayers[plr].name + " : " + allPlayers[plr].distance, 120, q)
+            fill("black")
             y = displayHeight-180-allPlayers[plr].distance;
+            textAlign(CENTER)
+            text(allPlayers[plr].name, x, y-60)
             cars[index].x = x;
             cars[index].y = y;
             if(index===player.index-1){
-                cars[index].shapeColor="red"
-                camera.position.x=displayWidth/2
-                camera.position.y=cars[index].y-height/2+50
+                push()
+                    fill("red")
+                    ellipse(cars[index].x,cars[index].y,60,100)
+                    camera.position.x=displayWidth/2
+                    camera.position.y=cars[index].y-height/2+50
+                pop()
             }
             x+=200
             index+=1
         }
-        image(TRACK,0,-height*4,width,height*5)
         drawSprites()
         if(keyIsDown(UP_ARROW)){
             player.distance+=10

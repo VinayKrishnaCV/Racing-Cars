@@ -3,6 +3,7 @@ class Form{
      this.input = createInput("ᗴᑎ丅ᗴᖇ ᑎᗩᗰᗴ")
      this.button = createButton("🅿🅻🅰🆈")
      this.greeting = createElement("h2")
+     this.resetable =  createButton("Reset")
     }
     display(){
         var title = createElement("h2")
@@ -19,6 +20,13 @@ class Form{
             player.index=playerCount
             player.updateCount(playerCount)
             player.update()
+        })
+        this.resetable.position(displayWidth/2+300,20)
+        this.resetable.size(100,30)
+        this.resetable.mousePressed(()=>{
+            game.update(0)
+            player.updateCount(0)
+            window.location.reload()
         })
     }
 }

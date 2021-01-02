@@ -25,7 +25,7 @@ function draw(){
 
     background("white");
 
-    if(playerCount===2){
+    if(playerCount===4){
         game.update(1)
     }
     if(gameState===1){

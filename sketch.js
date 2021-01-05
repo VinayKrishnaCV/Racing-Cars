@@ -1,5 +1,5 @@
 var gameState=0,playerCount,database,game,form,player,allPlayers;
-var cars,car1,car2,car3,car4,c1,c2,c3,c4,TRACK
+var cars,car1,car2,car3,car4,c1,c2,c3,c4,TRACK,TraCK
 
 
 function preload(){
@@ -8,6 +8,8 @@ function preload(){
     c3=loadImage("Images/car3.png")
     c4=loadImage("Images/car4.png")
     TRACK=loadImage("Images/track.jpg")
+    TraCK=loadImage("Images/the image.jpg")
+
 }
 
 
@@ -23,7 +25,7 @@ function setup(){
 
 function draw(){
 
-    background("white");
+    background(TraCK);
 
     if(playerCount===4){
         game.update(1)

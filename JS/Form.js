@@ -3,7 +3,7 @@ class Form{
      this.input = createInput("ᗴᑎ丅ᗴᖇ ᑎᗩᗰᗴ")
      this.button = createButton("🅿🅻🅰🆈")
      this.greeting = createElement("h2")
-     this.resetable =  createButton("Reset")
+     this.resetable =  createButton("𝕽𝖊𝖘𝖊𝖙")
     }
     display(){
         var title = createElement("h2")
@@ -26,6 +26,7 @@ class Form{
         this.resetable.mousePressed(()=>{
             game.update(0)
             player.updateCount(0)
+            Player.updateFinishedCars(0)
             window.location.reload()
         })
     }

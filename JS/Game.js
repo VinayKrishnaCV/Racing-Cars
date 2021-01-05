@@ -40,6 +40,7 @@ class Game {
     play(){
         form.greeting.hide()
         Player.getPlayerInfo();
+        player.getFinishedCars()
         var x=350;
         var y;
         var index = 0;
@@ -69,10 +70,19 @@ class Game {
         }
         if(player.distance>2960){
             gameState=2
+            player.rank+=1
+            Player.updateFinishedCars(player.rank)
+            player.update()
         }
     }
 
     end(){
-        console.log("game ended do not join again")
+        camera.y=height/2
+        Player.getPlayerInfo();
+        var y=0
+        for(var plr in allPlayers){
+            text(allPlayers[plr].name+" You are "+allPlayers[plr].rank,width/2,height/2+y)
+            y+=20
+        }
     }
 }
